@@ -1,0 +1,149 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.background-video-container {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+#backgroundVideo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
+
+.logo-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.logo-center img {
+    max-width: 500px; 
+    height: auto;
+}
+
+/* Top bar and small logo */
+.top-bar {
+    position: absolute;
+    top: 20px; 
+    left: 20px; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    z-index: 2; 
+}
+
+.small-logo {
+    height: 80px; 
+    margin-bottom: 5px; 
+}
+
+.contact-info {
+    text-align: left;
+    color: #fff;
+}
+
+.contact-info p {
+    margin: 0;
+}
+
+.contact-info a {
+    color: #fff; 
+    text-decoration: none;
+}
+
+.book-now-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #fff;
+    color: #000;
+    text-decoration: none;
+    border-radius: 20px;
+    border: 2px solid #000;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.book-now-button:hover {
+    background: #f0f0f0;
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 768px) {
+    .logo-center img {
+        max-width: 300px;
+    }
+
+    .small-logo {
+        height: 60px;
+    }
+
+    .top-bar {
+        top: 10px;
+        left: 10px;
+    }
+
+    .book-now-button {
+        padding: 8px 16px;
+        top: 75%;
+    }
+
+    .contact-info p {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .logo-center img {
+        max-width: 200px;
+    }
+
+    .small-logo {
+        height: 40px;
+    }
+
+    .top-bar {
+        top: 5px;
+        left: 5px;
+    }
+
+    .book-now-button {
+        padding: 6px 12px;
+        top: 80%;
+    }
+
+    .contact-info p {
+        font-size: 12px;
+    }
+
+    /* iOS-Specific Fixes */
+@supports (-webkit-touch-callout: none) {
+    #backgroundVideo {
+        object-fit: cover; /* Ensure video covers screen on iOS */
+    }
+
+    .logo-center img {
+        max-width: 90%; /* Reduce the main logo size slightly on iPhones */
+    }
+
+    .book-now-button {
+        padding: 12px 24px; /* Slightly adjust button for iPhones */
+    }
+}
+
+}

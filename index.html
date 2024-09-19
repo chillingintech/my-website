@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ace Digital</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var video = document.getElementById('backgroundVideo');
+            video.onerror = function () {
+                document.body.style.background = "#000"; // Fallback background color if video fails
+            };
+        });
+    </script>
+</head>
+<body>
+    <div class="background-video-container">
+        <video autoplay muted loop playsinline id="backgroundVideo">
+            <source src="WEB_BG.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="top-bar">
+            <img src="AD SMALL LOGO.png" alt="Small Logo" class="small-logo">
+            <div class="contact-info">
+                <p>+91 9352990738</p>
+                <p><a href="mailto:sales@acedigitalofficial.com">sales@acedigitalofficial.com</a></p>
+            </div>
+        </div>
+        <div class="logo-center">
+            <img src="ACE DIGITAL NEW LOGO PSD.png" alt="Ace Digital Main Logo">
+        </div>
+        <a href="https://calendly.com/himanshuvaishnav/let-s-meet" class="book-now-button" target="_blank" rel="noopener noreferrer">Book Now</a>
+    </div>
+</body>
+</html>
