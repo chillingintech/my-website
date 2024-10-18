@@ -83,6 +83,25 @@ body, html {
     background: #f0f0f0;
 }
 
+/* Loader styles */
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8); /* Optional: Adds a semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensure it appears above other content */
+}
+
+.loader img {
+    width: 100px; /* Adjust based on your logo size */
+    height: auto; /* Maintain aspect ratio */
+}
+
 /* Responsive adjustments */
 @media only screen and (max-width: 768px) {
     .logo-center img {
@@ -145,5 +164,4 @@ body, html {
         padding: 12px 24px; /* Slightly adjust button for iPhones */
     }
 }
-
 }
