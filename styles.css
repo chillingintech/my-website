@@ -83,25 +83,6 @@ body, html {
     background: #f0f0f0;
 }
 
-/* Loader styles */
-.loader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.8); /* Optional: Adds a semi-transparent background */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999; /* Ensure it appears above other content */
-}
-
-.loader img {
-    width: 100px; /* Adjust based on your logo size */
-    height: auto; /* Maintain aspect ratio */
-}
-
 /* Responsive adjustments */
 @media only screen and (max-width: 768px) {
     .logo-center img {
@@ -151,17 +132,48 @@ body, html {
     }
 
     /* iOS-Specific Fixes */
-@supports (-webkit-touch-callout: none) {
-    #backgroundVideo {
-        object-fit: cover; /* Ensure video covers screen on iOS */
-    }
+    @supports (-webkit-touch-callout: none) {
+        #backgroundVideo {
+            object-fit: cover; /* Ensure video covers screen on iOS */
+        }
 
-    .logo-center img {
-        max-width: 90%; /* Reduce the main logo size slightly on iPhones */
-    }
+        .logo-center img {
+            max-width: 90%; /* Reduce the main logo size slightly on iPhones */
+        }
 
-    .book-now-button {
-        padding: 12px 24px; /* Slightly adjust button for iPhones */
+        .book-now-button {
+            padding: 12px 24px; /* Slightly adjust button for iPhones */
+        }
     }
 }
+
+/* Loader styling */
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.loader img {
+    width: 100px; /* Adjust as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Fade out animation */
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* Apply the fade out after 3 seconds */
+.loader.fade {
+    animation: fadeOut 1s forwards;
+    animation-delay: 3s; /* Wait 3 seconds before starting to fade out */
 }
