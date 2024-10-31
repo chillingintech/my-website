@@ -77,6 +77,16 @@ body, html {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 10; /* Increased z-index to ensure button is on top */
+    cursor: pointer; /* Ensure pointer cursor */
+}
+
+.background-video-container {
+    position: relative;
+    z-index: 1; /* Place this below the button */
+}
+
+.logo-center, .top-bar {
+    z-index: 10; /* Ensure they don't overlap with button */
 }
 
 .book-now-button:hover {
