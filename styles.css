@@ -73,11 +73,16 @@ body, html {
     border-radius: 20px;
     border: none;
     position: absolute;
-    top: 70%;
+    top: 70%; /* Adjust as needed */
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 10; /* Increased z-index to ensure button is on top */
-    cursor: pointer; /* Ensure pointer cursor */
+    z-index: 1000; /* Higher z-index to be above other elements */
+    cursor: pointer;
+    pointer-events: auto; /* Ensure button itself can receive pointer events */
+}
+
+.book-now-button:hover {
+    background: #f0f0f0;
 }
 
 .background-video-container {
