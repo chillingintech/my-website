@@ -83,6 +83,10 @@ body, html {
     background: #f0f0f0;
 }
 
+.book-now-button {
+    z-index: 10; /* Ensure it's above other elements */
+}
+
 /* Responsive adjustments */
 @media only screen and (max-width: 768px) {
     .logo-center img {
